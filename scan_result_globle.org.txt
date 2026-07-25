@@ -1,0 +1,19 @@
+Port Scan Report
+Target: globle.org
+Start time: 2026-07-23 14:42:43.449197
+End time: 2026-07-23 14:42:52.238380
+Duration: 0:00:08.789183
+
+Open ports:
+  Port 21: ftp
+  Port 80: http
+  Port 110: pop3
+  Port 143: imap2
+  Port 443: https
+  Port 465: submissions
+  Port 587: submission
+  Port 993: pop3s
+  Port 995: pop3s
+
+Total open ports: 9
+IP Address: 205.196.81.104
