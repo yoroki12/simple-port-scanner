@@ -59,20 +59,21 @@ with ThreadPoolExecutor(max_workers=50) as executor:
 end_time = datetime.now()
 open_ports.sort() 
 
-filename = f"scan_result_{target}.txt"
-with open(filename, "w") as f:
-    f.write(f"Port Scan Report\n")
-    f.write(f"Target: {target}\n")
-    f.write(f"Start time: {start_time}\n")
-    f.write(f"End time: {end_time}\n")
-    f.write(f"Duration: {end_time - start_time}\n")
-    f.write(f"\nOpen ports:\n")
-    for port, service in open_ports:
-        f.write(f"  Port {port}: {service}\n")
-    f.write(f"\nTotal open ports: {len(open_ports)}\n")
-    if check == 0:
-        f.write(f"IP Address: {ip}\n")
-    else:
-        pass
-
-print(f"\nscan completed! Results saved to {filename}")
+option = input("Do you want to save the results to a file? (y/n): ").lower()
+if option == "y":
+    filename = f"scan_result_{target}.txt"
+    with open(filename, "w") as f:
+        f.write(f"Port Scan Report\n")
+        f.write(f"Target: {target}\n")
+        f.write(f"Start time: {start_time}\n")
+        f.write(f"End time: {end_time}\n")
+        f.write(f"Duration: {end_time - start_time}\n")
+        f.write(f"\nOpen ports:\n")
+        for port, service in open_ports:
+            f.write(f"  Port {port}: {service}\n")
+        f.write(f"\nTotal open ports: {len(open_ports)}\n")
+        if check == 0:
+            f.write(f"IP Address: {ip}\n")
+        else:
+            pass
+    print(f"\nscan completed! Results saved to {filename}")
