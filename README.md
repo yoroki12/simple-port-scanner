@@ -41,14 +41,20 @@ You'll be asked to enter:
 - Port range to scan
 
 ## Example Output
-Mulai scan: 2026-07-19 10:23:01
-Port 22: OPEN (ssh)
-Port 80: OPEN (http)
-Port 25: FILTERED (errno 11)
-Selesai scan: 2026-07-19 10:23:03
-Durasi: 0:00:02
-Port OPEN: [(22, 'ssh'), (80, 'http')]
-Port FILTERED: [25]
+Port Scan Report
+Target: boardleaders.rf.gd
+Start time: 2026-08-14 23:06:09.064521
+End time: 2026-08-14 23:07:34.686004
+Duration: 0:01:25.621483
+
+Open ports:
+  Port 80: http
+  Port 443: https
+  Port 2049: nfs
+
+Total open ports: 3
+IP Address: 185.27.134.149
+
 
 ## Disclaimer
 
